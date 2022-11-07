@@ -37,7 +37,7 @@ void setup() {
 }
 
 void loop(){
-  bool isFiveMultipleTime = timeInfo.tm_min % 1 == 0;
+  bool isFiveMultipleTime = timeInfo.tm_min % 5 == 0;
   if(WiFi.status() == WL_CONNECTED && isFiveMultipleTime) {   
     if(!getLocalTime(&timeInfo)){
       Serial.println("Acesso ao ntp falhou");
